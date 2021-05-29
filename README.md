@@ -27,6 +27,7 @@ A note taking app utilizing express and heroku
 
 ## Tests
 - Tested in terminal on Mac and Windows
+- Watch my demo here https://youtu.be/n1Fh4QklBEw
 
 ## License
 - A/A
