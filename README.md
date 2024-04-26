@@ -13,7 +13,13 @@ Note Taker is a web application built using Express and Heroku, allowing users t
 - [Usage](#usage)
 - [Tests](#tests)
 - [CodeSamples](#code-samples)
+  - [server](#server.js)
+    - [index](#indexhtml)
+    - [notes](#noteshtml)
+  - [json](#json)
   - [routes](#routes)
+    - [apiroutes](#apiroutesjs)
+    - [htmlroutes](#htmlroutesjs)
 - [Creator](#creator)
 
 ## Link
@@ -47,6 +53,8 @@ Note Taker has been tested on both Mac and Windows platforms using terminal and 
 
 ## Code Samples
 
+### Server.js
+
 ```Server.js
 // Dependencies
 const express = require('express');
@@ -64,6 +72,8 @@ app.listen(PORT, () => {
 console.log(`App listening on PORT: ${PORT}`);
 });
 ```
+
+### Public
 
 ```Index.html
 <!DOCTYPE html>
@@ -93,6 +103,55 @@ console.log(`App listening on PORT: ${PORT}`);
 </html>
 ```
 
+#### Notes.html
+
+```Notes.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <title>Note Taker</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-success">
+    <a class="navbar-brand" href="/">The Note Taker📝</a>
+    <div class="icons">
+      <i class="fas fa-save text-light save-note"></i>
+      <i class="fas fa-pen text-light new-note"></i>
+    </div>
+  </nav>
+  <!-- Main content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4 list-container">
+        <div class="card">
+          <ul class="list-group">
+          </ul>
+        </div>
+      </div>
+      <div class="col-8">
+        <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
+        <textarea class="note-textarea" placeholder="Note Text"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="/assets/js/index.js"></script>
+</body>
+</html>
+```
+
+### JSON
+
 ```db.json
 [
     {
@@ -109,6 +168,8 @@ console.log(`App listening on PORT: ${PORT}`);
 ```
 
 ### Routes
+
+#### APIRoutes.js
 
 ```apiRoutes.js
 
@@ -156,6 +217,8 @@ res.json(db);
 };
 ```
 
+#### HTMLRoutes.js
+
 ```htmlRoutes.js
 
 const path = require("path");
@@ -170,51 +233,6 @@ res.sendFile(path.join(\_\_dirname, '../public/notes.html'));
     });
 
 };
-```
-
-```Notes.html
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Meta tags -->
-  <title>Note Taker</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-success">
-    <a class="navbar-brand" href="/">The Note Taker📝</a>
-    <div class="icons">
-      <i class="fas fa-save text-light save-note"></i>
-      <i class="fas fa-pen text-light new-note"></i>
-    </div>
-  </nav>
-  <!-- Main content -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4 list-container">
-        <div class="card">
-          <ul class="list-group">
-          </ul>
-        </div>
-      </div>
-      <div class="col-8">
-        <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        <textarea class="note-textarea" placeholder="Note Text"></textarea>
-      </div>
-    </div>
-  </div>
-  <!-- JavaScript -->
-  <script src="/assets/js/index.js"></script>
-</body>
-</html>
 ```
 
 ## Creator
