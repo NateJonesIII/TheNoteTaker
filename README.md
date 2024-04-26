@@ -1,4 +1,4 @@
-# readMeGenerator-Project                   
+# Note Taker               
 
 ## Description
 A note taking app utilizing express and heroku
