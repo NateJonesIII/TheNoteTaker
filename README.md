@@ -7,16 +7,23 @@ Note Taker is a web application built using Express and Heroku, allowing users t
 ## Table of Contents
 
 - [Link](#link)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
 - [Demo](#demo)
-- [Questions](#questions)
+- [Installation](#installation)
+- [Technologies](#technologies)
+- [Usage](#usage)
+- [Tests](#tests)
+- [CodeSamples](#code-samples)
+  - [routes](#routes)
+- [Creator](#creator)
 
 ## Link
 
 [View Here!](https://notetaker24-a729bbe2a4f4.herokuapp.com)
+
+## Demo
+
+You can watch a demo of Note Taker here.
+https://youtu.be/n1Fh4QklBEw
 
 ## Installation
 
@@ -26,31 +33,17 @@ To install Note Taker, you'll need Node.js along with npm. Once you have these i
 npm install express fs
 ```
 
+## Technologies
+
+Note Taker is a web application built using `Node.js`, `Express`, and `Heroku`. It allows users to create, store, and delete notes conveniently. The server-side script (server.js) handles the backend logic, while the front end is managed by HTML files (index.html and notes.html) and associated JavaScript files.
+
 ## Usage
 
 After installation, you can use Note Taker to take notes by navigating to the provided link. Simply click on "Get Started" to begin creating and managing your notes.
 
-## Contributing
-
-Contributions to Note Taker are welcome. If you're interested in contributing, please reach out to Nate Jones.
-
 ## Tests
 
 Note Taker has been tested on both Mac and Windows platforms using terminal and heroku commands.
-
-## Demo
-
-You can watch a demo of Note Taker here.
-https://youtu.be/n1Fh4QklBEw
-[Questions](#questions)
-
-## Questions
-
-If you have any further questions, you can find my GitHub profile here or email me at 15nate.jones@gmail.com.
-
-## Technologies
-
-Note Taker is a web application built using `Node.js`, `Express`, and `Heroku`. It allows users to create, store, and delete notes conveniently. The server-side script (server.js) handles the backend logic, while the front end is managed by HTML files (index.html and notes.html) and associated JavaScript files.
 
 ## Code Samples
 
@@ -223,3 +216,7 @@ res.sendFile(path.join(\_\_dirname, '../public/notes.html'));
 </body>
 </html>
 ```
+
+## Creator
+
+- [Profile](https://github.com/NateJonesIII/ "Nathaniel Jones") - [LinkedIn](https://www.linkedin.com/in/nathaniel-jones/) - [Email](mailto:15nate.jones@gmail.com?subject=Hello "Hello Nate!")
